@@ -6,3 +6,4 @@ pwntools==4.2.2
 matplotlib==2.2.5
 pwn==1.0
 pyserial==3.4
+mako>=1.2.2 # not directly required, pinned by Snyk to avoid a vulnerability

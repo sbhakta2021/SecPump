@@ -1,4 +1,4 @@
-FROM ubuntu:16.04 AS download-tarballs
+FROM ubuntu:xenial-20210416 AS download-tarballs
 
 ARG SIFIVE_TOOLS_URL=https://static.dev.sifive.com/dev-tools/freedom-tools/v2020.08
 
@@ -31,7 +31,7 @@ RUN wget --no-verbose ${SIFIVE_TOOLS_URL}/${QEMU_TARBALL} && \
     mkdir -p /tools && \
     rsync -a ${QEMU_TARBALL%.tar.gz}/* /tools/
 
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20210416
 
 RUN apt-get update && \
     apt-get upgrade -y && \
